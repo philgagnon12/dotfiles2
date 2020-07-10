@@ -1,0 +1,8 @@
+file( STRINGS /etc/shells SHELLS
+      REGEX oksh
+)
+
+if( NOT "${SHELLS}" )
+    file( APPEND /etc/shells "\n${CMAKE_INSTALL_PREFIX}/oksh/bin/oksh" )
+endif()
+
