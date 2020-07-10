@@ -3,6 +3,6 @@ file( STRINGS /etc/shells SHELLS
 )
 
 if( NOT "${SHELLS}" )
-    file( APPEND /etc/shells "\n${CMAKE_INSTALL_PREFIX}/oksh/bin/oksh" )
+    file( APPEND /etc/shells "${CMAKE_INSTALL_PREFIX}/oksh/bin/oksh\n" )
 endif()
 

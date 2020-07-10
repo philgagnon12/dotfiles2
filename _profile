@@ -1,3 +1,5 @@
+PATH=@DOTFILES2_PATH@:${PATH}
+
 export CLI_COLORS=1
 SHORTPS="$ "
 export MYPS1=${SHORTPS}
@@ -24,7 +26,7 @@ term_char()
 longps() {
     TERM_CHAR='$(term_char)'
     PS1="\[${RED}\]\\u\[${EA}\]:\[${BLUE}\]\\w\[${EA}\]"
-    gitstatus='$(${HOME}/repos/dotfiles/gitstatus.py)'
+    gitstatus='$(@CMAKE_INSTALL_PREFIX@/gitstatus.py)'
     PS1="${PS1} \[${gitstatus}\]${TERM_CHAR} "
 }
 
@@ -48,14 +50,11 @@ export EDITOR=vim
 # Set vi mode for bash
 set -o vi
 
-# GIT powerline
-# . ~/.dotfiles/bash-powerline.sh
-
 #include aliases
-. ~/.dotfiles/aliases.sh
+. @CMAKE_INSTALL_PREFIX@/aliases.sh
 
 #Enable base16 color themes
-. ~/.dotfiles/base16-shell.sh ~/.dotfiles/base16-shell
+. @CMAKE_INSTALL_PREFIX@/base16-shell.sh @CMAKE_INSTALL_PREFIX@/base16-shell
 
 #Shell color
 base16_rebecca
