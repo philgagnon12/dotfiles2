@@ -17,6 +17,7 @@ set( PROFILE_PATH )
 
 include( oksh )
 include( base16-shell )
+include( vim )
 
 
 
