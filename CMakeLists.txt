@@ -19,6 +19,7 @@ include( oksh )
 include( base16-shell )
 include( vim )
 include( base16-vim )
+include( tmux )
 
 
 
