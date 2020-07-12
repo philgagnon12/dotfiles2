@@ -4,7 +4,7 @@
 # sudo make oksh-shells
 # make oksh-chsh
 
-cmake_minimum_required( VERSION 3.17.1 )
+cmake_minimum_required( VERSION 3.16 )
 
 project( dotfiles2 )
 
@@ -16,6 +16,7 @@ execute_process( COMMAND git --version )
 set( PROFILE_PATH )
 
 include( oksh )
+include( base16-shell )
 
 
 
@@ -30,7 +31,7 @@ configure_file( _profile ${CMAKE_CURRENT_BINARY_DIR}/_profile @ONLY )
 
 install( FILES ${CMAKE_CURRENT_BINARY_DIR}/_profile
     DESTINATION     $ENV{HOME}
-    RENAME          __profile
+    RENAME          .profile
 )
 
 add_custom_target( todo ALL
