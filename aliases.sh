@@ -6,3 +6,4 @@ alias egrep="egrep --color=auto"
 
 alias pe="printenv | grep "
 
+alias tree="tree -C"
