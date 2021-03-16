@@ -5,6 +5,7 @@ if( NOT EXISTS "${CMAKE_SOURCE_DIR}/vendor/oksh" )
 
     FetchContent_Declare( oksh-dl
         GIT_REPOSITORY  "https://github.com/ibara/oksh"
+        GIT_TAG         "oksh-6.8.1"
         SOURCE_DIR      "${CMAKE_SOURCE_DIR}/vendor/oksh"
     )
 
