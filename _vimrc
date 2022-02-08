@@ -51,7 +51,7 @@ hi TabLineSel  term=bold ctermfg=18 ctermbg=4
 hi StatusLine term=bold,reverse ctermfg=21 ctermbg=6
  
 " () {} [] coloring when hovering
-hi MatchParen term=reverse ctermfg=18 ctermbg=14
+hi MatchParen term=reverse ctermfg=14 ctermbg=18
 
 " Tab Title
 hi Title NONE
