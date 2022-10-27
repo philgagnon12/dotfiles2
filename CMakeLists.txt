@@ -15,11 +15,15 @@ execute_process( COMMAND git --version )
 
 set( PROFILE_PATH )
 
-include( oksh )
-include( base16-shell )
-include( vim )
-include( base16-vim )
-include( tmux )
+if(WIN32)
+    include( vim )
+else()
+    include( oksh )
+    include( base16-shell )
+    include( vim )
+    include( base16-vim )
+    include( tmux )
+endif()
 
 
 
