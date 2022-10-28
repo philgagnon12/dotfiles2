@@ -37,6 +37,9 @@ augroup END
 hi CursorLine term=reverse ctermbg=19
 hi CursorColumn term=reverse ctermbg=19
 
+" Cursor block in all modes
+set guicursor=n-v-c-i:block
+
 " Color theme
 source @CMAKE_INSTALL_PREFIX@/base16-shell.vim
 
